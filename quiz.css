@@ -457,6 +457,56 @@ align-items: center;
     background: rgb(232, 5, 168);
     color:whitesmoke ;
 }
+@media screen and (max-width: 600px) {
+  .quizbox, .resultbox {
+    width: 95vw;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .popup-info {
+    width: 90vw;
+    font-size: 16px;
+    padding: 10px;
+  }
+  .home-content h1 {
+    font-size: 38px;
+  }
+  .header .logo {
+    font-size: 25px;
+  }
+  .optionlist .option {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .quizheader .time, .quizheader .headerscore {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .quizfooter .nextbtn, .popup-info .infobtn {
+    width: 95px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .percentagecontainer .circularprogress {
+    width: 150px;
+    height: 150px;
+  }
+  .resultbox h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home-content h1 {
+    font-size: 26px;
+  }
+  .quizbox, .resultbox, .popup-info {
+    width: 99vw;
+    font-size: 13px;
+    padding: 4px;
+  }
+}
+
 
 
 
