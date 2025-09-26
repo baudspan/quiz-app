@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <link rel="stylesheet" href="quiz.css">
+        
+        <title>online quiz app</title>
+    </head>
+    <body>
+        <main class="main">
+            <header class="header">
+                <a href="#" class="logo">baudspan.</a>
+                <nav class="navbar">
+                    <a href="#">home</a>
+                    <a href="#">about</a>
+                    <a href="#">services</a>
+                    <a href="#">contact</a>
+                </nav>
+            </header>
+            <div class="container">
+                <section class="quizsection">
+                    <div class="quizbox">
+                        <h1>Data Science Quiz</h1>
+                        <div class="quizheader">
+                            <span>QUICK QUIZ</span>
+                            <span class="time">0.0</span>
+                            <span class="headerscore">Score:0/5</span>
+                        </div>
+                        <h2 class="question">1. Which pandas function is used to<br>   remove rows with missing values?</h2>
+                        <div class="optionlist">
+                            <div class="option">
+                                <span>A. dropna()</span>
+                            </div>
+                            <div class="option">
+                                <span>B. remove()</span>
+                            </div>
+                            <div class="option">
+                                <span>C. fillna()</span>
+                            </div>
+                            <div class="option">
+                                <span>D. delete()</span>
+                            </div>
+                        </div>
+                        <div class="quizfooter">
+                            <span class="totalquestion">1 of 5 questions</span>
+                            <button class="nextbtn">NEXT</button>
+                        </div>
+                    </div>
+                    <div class="resultbox">
+                        <h2>quiz result!</h2>
+                        <div class="percentagecontainer">
+                            <div class="circularprogress">
+                                <span class="progressvalue">0%</span>
+                            </div>
+                            <span class="scoretest">your score 0 out of 5</span>
+                        </div>
+                        <div class="button">
+                            <button class="tryagainbtn">Try Again</button>
+                            <button class="gohomebtn">Go To Home</button>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="home">
+                    <div class="home-content">
+                        <h1>QuizZone</h1>
+                        <p>Welcome to QuizZone — your ultimate destination for fun, challenging, and interactive quizzes! Test your knowledge across a wide range of topics, compete with friends, and sharpen your skills all in one place. Whether you’re here to learn something new or just pass the time, QuizZone offers an engaging experience for everyone. Dive in and start quizzing!</p>
+                        <button class="start-btn">Start Quiz</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <div class="popup-info">
+            <h2>Instructions</h2>
+            <span class="info">1.Click the "Start" button to begin the quiz.</span>
+            <span class="info">2.After selecting an answer, use the "Next" button to proceed to the next question.</span>
+            <span class="info">3.make sure you answer before time runs out.</span>
+            <span class="info">4.Click the "Submit" button to finish and see your score.</span>
+            <span class="info">5.If you want, you can retake the quiz to improve your score or practice further.</span>
+        <div class="btngc">
+            <button class="infobtn exitbtn">exit quiz</button>
+            <a href="#" class="infobtn contbtn">continue</a>
+
+        </div>
+        </div>
+    <script src="question.js"></script>
+    <script src="quiz.js"></script>
+    </body>
+</html>
