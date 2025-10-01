@@ -409,9 +409,7 @@ body{
     color: whitesmoke;
 }
 
-/* Responsive fixes */
 
-/* Fix container and section widths and positions on mobile/tablet */
 @media (max-width: 1024px) {
   .container, .home, .quizsection {
     width: 100vw !important;
@@ -459,11 +457,38 @@ body{
 
 /* Mobile view */
 @media (max-width: 767px) {
-  .quizbox, .resultbox {
-    width: 90vw;
-    max-width: 90vw;
-    padding: 10px 15px;
-    font-size: 85%;
+    @media (max-width: 1024px) {
+  .quizsection {
+    position: relative; 
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+  }
+  .quizsection.active {
+    opacity: 1;
+    pointer-events: auto;
+    max-height: 100vh; 
+  }
+}
+
+  .quizsection .resultbox {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    padding: 20px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999 !important;
+    background: rgba(26, 11, 35, 0.95) !important;
   }
   .home {
     padding: 40px 10px 120px;
@@ -494,5 +519,6 @@ body{
     padding: 0 10px;
   }
 }
+
 
 
