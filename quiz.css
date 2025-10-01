@@ -410,13 +410,45 @@ body{
 }
 @media(max-width: 480px){
 
-  /* Make main container and parts full width */
+  /* Full pink background coverage */
+  .main {
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw !important;
+    background: url('quizbg.jpg') no-repeat center center fixed;
+    background-size: cover !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+  body {
+    background: none !important;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide navbar entirely */
+  .navbar {
+    display: none !important;
+  }
+
+  /* Full width containers, remove offsets */
   .container, .home, .quizsection {
     width: 100vw !important;
+    min-width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
     left: 0 !important;
-    position: static !important;
-    padding: 10px !important;
-    margin: 0 auto !important;
+    position: relative !important;
     flex-direction: column !important;
     align-items: center !important;
   }
@@ -428,18 +460,15 @@ body{
     text-shadow: none;
     flex-direction: column;
   }
-
   .home-content h1 {
     font-size: 24px !important;
     margin-bottom: 15px;
   }
-
   .home-content p {
     font-size: 14px !important;
     margin-bottom: 20px;
     text-shadow: none;
   }
-
   .home-content .start-btn {
     width: 80% !important;
     height: 35px !important;
@@ -459,12 +488,10 @@ body{
   .quizbox h1 {
     font-size: 24px !important;
   }
-
   .quizbox .quizheader span,
   .quizheader span {
     font-size: 12px !important;
   }
-
   .quizbox .question {
     font-size: 18px !important;
   }
@@ -493,20 +520,16 @@ body{
     border-radius: 15px !important;
     padding: 15px !important;
   }
-
   .resultbox h2 {
     font-size: 36px !important;
   }
-
   .percentagecontainer .circularprogress {
     width: 180px !important;
     height: 180px !important;
   }
-
   .circularprogress .progressvalue {
     font-size: 30px !important;
   }
-
   .resultbox .scoretest {
     font-size: 18px !important;
   }
@@ -519,6 +542,3 @@ body{
     margin: 5px !important;
   }
 }
-
-
-
