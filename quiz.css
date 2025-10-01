@@ -457,117 +457,22 @@ align-items: center;
     background: rgb(232, 5, 168);
     color:whitesmoke ;
 }
-/* Tablet styles */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .quizbox, .resultbox {
-    width: 90vw;
-    max-width: 700px;
-    padding: 15px;
-    font-size: 18px;
+@media (max-width: 1024px) {
+  .container, .home, .quizsection {
+    width: 100vw !important;
+    left: 0 !important;
+    position: static !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .home-content h1 { font-size: 44px; }
-  .main, .container { padding: 0 10px; }
 }
 
-/* Mobile styles */
 @media (max-width: 767px) {
   .quizbox, .resultbox {
-    width: 97vw;
-    max-width: 98vw;
-    padding: 8px;
-    font-size: 16px;
-  }
-  .home-content h1 { font-size: 28px; }
-  .header, .navbar a { font-size: 14px; }
-  .main, .container { padding: 0 2px; }
-}
-/* Tablet styles: 768px to 1024px */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .quizbox, .resultbox {
-    width: 85vw;
-    max-width: 600px;
-    padding: 15px 20px;
-    font-size: 90%;
-  }
-  .home-content h1 {
-    font-size: 55px;
-  }
-  .main, .container {
-    padding: 0 15px;
-  }
-  .navbar a {
-    font-size: 15px;
-    margin-left: 20px;
-  }
-  .header {
-    padding: 15px 10px;
-  }
-  .quizfooter .nextbtn {
-    width: 90px;
-    height: 40px;
-    font-size: 14px;
+    width: 98vw !important;
+    max-width: 98vw !important;
   }
 }
-
-/* Mobile styles: up to 767px */
-@media (max-width: 767px) {
-  .quizbox, .resultbox {
-    width: 90vw;
-    max-width: 90vw;
-    padding: 10px 15px;
-    font-size: 85%;
-  }
-  .home {
-    padding: 40px 10px 120px;
-    flex-direction: column;
-    height: auto;
-  }
-  .home-content h1 {
-    font-size: 32px;
-  }
-  .header {
-    padding: 10px 5px;
-  }
-  .navbar a {
-    font-size: 13px;
-    margin-left: 15px;
-  }
-  .quizfooter .nextbtn {
-    width: 80px;
-    height: 38px;
-    font-size: 13px;
-  }
-  .optionlist .option {
-    font-size: 14px;
-    margin: 12px 0;
-    padding: 10px;
-  }
-  .main, .container {
-    padding: 0 10px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
