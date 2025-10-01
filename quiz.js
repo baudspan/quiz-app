@@ -26,9 +26,15 @@ contbtn.onclick = function() {
 
    showquestions(0);
    questioncounter(1);
-   headerscore()
+   headerscore();
+   clearInterval(timerInterval);   
+  timeLeft = 60;                  
+  startTimer(); 
 };
 tryagainbtn.onclick = function() {
+  clearInterval(timerInterval);
+  timeLeft = 60;
+  startTimer();
   quizbox.classList.add('active');
   nextbtn.classList.remove('active');
   resultbox.classList.remove('active');
@@ -152,7 +158,7 @@ function showresultbox(){
 
 
 }
-let timeLeft = 30;
+let timeLeft = 60;
 let timerInterval;
 function startTimer() {
   const timeDisplay = document.querySelector('.time');
@@ -172,4 +178,4 @@ function formatTime(seconds) {
   let sec = seconds % 60;
   return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
 }
-startTimer();
+
