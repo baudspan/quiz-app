@@ -408,4 +408,117 @@ body{
     background: rgb(232, 5, 168);
     color: whitesmoke;
 }
+@media(max-width: 480px){
+
+  /* Make main container and parts full width */
+  .container, .home, .quizsection {
+    width: 100vw !important;
+    left: 0 !important;
+    position: static !important;
+    padding: 10px !important;
+    margin: 0 auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Home page */
+  .home {
+    padding: 20px 10px;
+    height: auto;
+    text-shadow: none;
+    flex-direction: column;
+  }
+
+  .home-content h1 {
+    font-size: 24px !important;
+    margin-bottom: 15px;
+  }
+
+  .home-content p {
+    font-size: 14px !important;
+    margin-bottom: 20px;
+    text-shadow: none;
+  }
+
+  .home-content .start-btn {
+    width: 80% !important;
+    height: 35px !important;
+    font-size: 14px !important;
+  }
+
+  /* Quiz container */
+  .quizbox, .resultbox {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+    border-radius: 15px !important;
+  }
+
+  /* Headings and Text */
+  .quizbox h1 {
+    font-size: 24px !important;
+  }
+
+  .quizbox .quizheader span,
+  .quizheader span {
+    font-size: 12px !important;
+  }
+
+  .quizbox .question {
+    font-size: 18px !important;
+  }
+
+  /* Options */
+  .optionlist .option {
+    font-size: 14px !important;
+    padding: 10px !important;
+    margin: 10px 0 !important;
+  }
+
+  /* Footer */
+  .quizfooter .totalquestion {
+    font-size: 12px !important;
+  }
+  .quizfooter .nextbtn {
+    width: 75px !important;
+    height: 35px !important;
+    font-size: 13px !important;
+  }
+
+  /* Result Box */
+  .quizsection .resultbox {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    border-radius: 15px !important;
+    padding: 15px !important;
+  }
+
+  .resultbox h2 {
+    font-size: 36px !important;
+  }
+
+  .percentagecontainer .circularprogress {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .circularprogress .progressvalue {
+    font-size: 30px !important;
+  }
+
+  .resultbox .scoretest {
+    font-size: 18px !important;
+  }
+
+  /* Buttons */
+  .button button {
+    width: 100px !important;
+    height: 40px !important;
+    font-size: 13px !important;
+    margin: 5px !important;
+  }
+}
+
+
 
