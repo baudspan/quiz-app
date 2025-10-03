@@ -44,6 +44,7 @@ tryagainbtn.onclick = function() {
   showquestions(questioncount);
   questioncounter(questionnumb);
   headerscore();
+  shuffle(questions);
 
 };
 gohomebtn.onclick = function() {
@@ -83,17 +84,16 @@ nextbtn.onclick = function() {
 const optionlist = document.querySelector('.optionlist');
 
 function showquestions(index){
-  const question=document.querySelector('.question');
-  question.textContent=`${questions[index].numb}. ${questions[index].question}`
+  const question = document.querySelector('.question');
+  // Display question number as its position in the current (shuffled) array
+  question.textContent = `${index + 1}. ${questions[index].question}`;
   let optiontag = `<div class="option"><span>${questions[index].option[0]}</span></div>
   <div class="option"><span>${questions[index].option[1]}</span></div>
   <div class="option"><span>${questions[index].option[2]}</span></div>
   <div class="option"><span>${questions[index].option[3]}</span></div>`;
-
   optionlist.innerHTML = optiontag;
-
   const option = document.querySelectorAll('.option');
-  for(let i = 0; i <option.length; i++ ){
+  for(let i = 0; i < option.length; i++ ){
     option[i].setAttribute('onclick','optionselected(this)');
   }
 }
@@ -178,4 +178,22 @@ function formatTime(seconds) {
   let sec = seconds % 60;
   return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
 }
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+
+shuffle(questions);
+
+
+questions.forEach(q => {
+  let allAnswers = [q.correct_answer, ...q.incorrect_answers];
+  shuffle(allAnswers);
+  q.allAnswers = allAnswers;
+});
+
 
