@@ -457,3 +457,79 @@ align-items: center;
     background: rgb(232, 5, 168);
     color:whitesmoke ;
 }
+/* === Mobile Responsiveness === */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;   
+        overflow-y: auto;
+    }
+    .navbar {
+    display: none;
+    }
+
+    .container {
+        width: 200%;   
+        height: 100vh;
+    }
+
+    .home {
+        left: -50%;          
+        padding: 3rem 1rem;  
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-content h1 {
+        font-size: clamp(28px, 7vw, 50px);
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .home-content .start-btn {
+        width: 80%;
+        max-width: 280px;
+    }
+    .popup-info {
+    width: 90%;
+    max-width: 380px;
+    padding: 15px;
+    }
+    .popup-info h2 {
+    font-size: 28px;  
+    }
+   .popup-info .info {
+    font-size: 14px;  
+    line-height: 1.4;
+   }
+
+
+    .quizsection {
+        left: -50%;   
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .quizsection.active {
+        left: 0;      
+    }
+
+    .quizsection .quizbox,
+    .quizsection .resultbox {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    .popup-info {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .resultbox h2 {
+        font-size: 32px;
+    }
+}
+
+
